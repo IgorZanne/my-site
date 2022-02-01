@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.scene {
+  width: 100px;
+  height: 100px;
+
+  margin: 20px;
+  perspective: 200px;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+}
+
+.cube.is-spinning {
+  animation: spinCube 6s infinite linear;
+}
+
+@keyframes spinCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube__face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #211f42;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px #2b2957;
+}
+
+/* .cube__face--front  { background: hsla(120, 100%, 50%); }
+.cube__face--right  { background: hsla(0, 100%, 50%); }
+.cube__face--back   { background: hsla(60, 100%, 50%); }
+.cube__face--left   { background: hsla(30, 100%, 50%); }
+.cube__face--top    { background: hsla(0, 0%, 98%); }
+.cube__face--bottom { background: hsla(240, 100%, 50%); } */
+
+.cube__face--front {
+  background: rgba(0, 83, 138, 0.596);
+}
+.cube__face--right {
+  background: rgba(0, 83, 138, 0.596);
+}
+.cube__face--back {
+  background: rgba(0, 83, 138, 0.596);
+}
+.cube__face--left {
+  background: rgba(0, 83, 138, 0.596);
+}
+.cube__face--top {
+  background: rgba(0, 83, 138, 0.596);
+}
+.cube__face--bottom {
+  background: rgba(0, 83, 138, 0.596);
+}
+
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(50px);
+}
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.cube.is-backface-hidden .cube__face {
+  backface-visibility: hidden;
+}

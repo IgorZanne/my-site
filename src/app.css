@@ -1,0 +1,51 @@
+.app {
+  text-align: center;
+}
+
+.app-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.app-header {
+  background-color: black;
+  background-image: radial-gradient(#201f56 1%, #201f56 1%, black 80%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  font-family: "Oswald", sans-serif;
+  color: white;
+  text-shadow: 0 0 5px #808080, 0 0 10px #808080, 0 0 15px #808080;
+}
+
+.app-link {
+  color: rgba(0, 83, 138, 0.596);
+}
+
+.app-resume {
+  background-color: #201f5600;
+  border: 2px solid rgba(0, 83, 138, 0.596);
+  border-radius: 6px;
+  padding: 6px 30px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: rgba(0, 83, 138, 0.596);
+}
+
+p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
